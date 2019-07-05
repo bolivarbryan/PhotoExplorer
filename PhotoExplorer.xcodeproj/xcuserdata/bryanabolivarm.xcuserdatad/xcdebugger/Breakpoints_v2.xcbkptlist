@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PhotoExplorer/App/Networking/API.swift"
+            timestampString = "584003249.8183"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
+            landmarkName = "fetchRecentPhotosFromUnsplash(completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PhotoExplorer.API.fetchRecentPhotosFromUnsplash(completion: (Swift.Array&lt;PhotoExplorer.Photo&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "PhotoExplorer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bryanabolivarm/personalProjects/PhotoExplorer/PhotoExplorer/App/Networking/API.swift"
+                  timestampString = "584003249.928538"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "86"
+                  endingLineNumber = "86"
+                  offsetFromSymbolStart = "518">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in PhotoExplorer.API.fetchRecentPhotosFromUnsplash(completion: (Swift.Array&lt;PhotoExplorer.Photo&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "PhotoExplorer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bryanabolivarm/personalProjects/PhotoExplorer/PhotoExplorer/App/Networking/API.swift"
+                  timestampString = "584003249.931313"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "87"
+                  endingLineNumber = "87"
+                  offsetFromSymbolStart = "250">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
