@@ -101,18 +101,22 @@ extension API {
         session.finishTasksAndInvalidate()
     }
 
-    func searchPhotosFromUnsplash(query:String, completion: @escaping (_ photos: [Photo]) -> Void) {
-        let sessionConfig = URLSessionConfiguration.default
-        let session = URLSession(configuration: sessionConfig, delegate: nil, delegateQueue: nil)
-        guard var URL = URL(string: "https://api.unsplash.com/search/photos") else {return}
-        let URLParams = [
-            "client_id": "a70408e1152b36858ed2aff1cea5b1927c2c34997aa25d5a7c30788729bede4d",
-            "query": query
-        ]
-        URL = URL.appendingQueryParameters(URLParams)
-        var request = URLRequest(url: URL)
-        request.httpMethod = "GET"
-        let task = session.dataTask(with: request, completionHandler: { (data: Data?, response: URLResponse?, error: Error?) -> Void in
+
+    private func searchPhotosFromUnsplash(query:String, completion: @escaping (_ photos: [Photo]) -> Void) {
+        let session = URLSession(configuration: URLSessionConfiguration.default,
+                                 delegate: nil, delegateQueue: nil)
+
+        //    guard var URL = URL(string: "https://api.unsplash.com/search/photos") else {return}
+        //        let URLParams = [
+        //            "client_id": "a70408e1152b36858ed2aff1cea5b1927c2c34997aa25d5a7c30788729bede4d",
+        //            "query": query
+        //        ]
+        //        URL = URL.appendingQueryParameters(URLParams)
+        //        var request = URLRequest(url: URL)
+        //        request.httpMethod = "GET"
+
+
+        let task = session.dataTask(with: UnsplashService.search(query: query).request, completionHandler: { (data: Data?, response: URLResponse?, error: Error?) -> Void in
             if (error == nil) {
                 let statusCode = (response as! HTTPURLResponse).statusCode
                 print("URL Session Task Succeeded: HTTP \(statusCode)")

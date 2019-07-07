@@ -17,6 +17,10 @@
 		F4933FD522CF1E94009021A1 /* UnsplashService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4933FD422CF1E94009021A1 /* UnsplashService.swift */; };
 		F4933FD722CF1FA5009021A1 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4933FD622CF1FA5009021A1 /* API.swift */; };
 		F4933FD922CF22BA009021A1 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4933FD822CF22BA009021A1 /* Photo.swift */; };
+		F4FF6F0322D28BC000D8DB7F /* PhotoExploreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FF6F0222D28BC000D8DB7F /* PhotoExploreViewModel.swift */; };
+		F4FF6F0622D290FC00D8DB7F /* FetchPhotosFromFlickrOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FF6F0522D290FC00D8DB7F /* FetchPhotosFromFlickrOperation.swift */; };
+		F4FF6F0822D2923500D8DB7F /* BaseOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FF6F0722D2923500D8DB7F /* BaseOperation.swift */; };
+		F4FF6F0A22D29CE300D8DB7F /* FetchPhotosFromUnsplashOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FF6F0922D29CE300D8DB7F /* FetchPhotosFromUnsplashOperation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,10 @@
 		F4933FD422CF1E94009021A1 /* UnsplashService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashService.swift; sourceTree = "<group>"; };
 		F4933FD622CF1FA5009021A1 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		F4933FD822CF22BA009021A1 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		F4FF6F0222D28BC000D8DB7F /* PhotoExploreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoExploreViewModel.swift; sourceTree = "<group>"; };
+		F4FF6F0522D290FC00D8DB7F /* FetchPhotosFromFlickrOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchPhotosFromFlickrOperation.swift; sourceTree = "<group>"; };
+		F4FF6F0722D2923500D8DB7F /* BaseOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseOperation.swift; sourceTree = "<group>"; };
+		F4FF6F0922D29CE300D8DB7F /* FetchPhotosFromUnsplashOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchPhotosFromUnsplashOperation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,7 +95,6 @@
 			children = (
 				F4933FCC22CF1C01009021A1 /* App */,
 				F4933FAA22CF1BDC009021A1 /* AppDelegate.swift */,
-				F4933FAC22CF1BDC009021A1 /* ViewController.swift */,
 				F4933FAE22CF1BDC009021A1 /* Main.storyboard */,
 				F4933FB122CF1BDE009021A1 /* Assets.xcassets */,
 				F4933FB322CF1BDE009021A1 /* LaunchScreen.storyboard */,
@@ -126,6 +133,7 @@
 		F4933FCC22CF1C01009021A1 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				F4FF6F0B22D2A09900D8DB7F /* Persistance */,
 				F4933FCD22CF1C0A009021A1 /* Features */,
 				F4933FCA22CF1BF0009021A1 /* Networking */,
 				F4933FCB22CF1BFA009021A1 /* Models */,
@@ -144,6 +152,7 @@
 		F4933FCE22CF1C12009021A1 /* PhotoExplore */ = {
 			isa = PBXGroup;
 			children = (
+				F4FF6F0422D290E000D8DB7F /* Operations */,
 				F4933FD122CF1C2B009021A1 /* Views */,
 				F4933FD022CF1C22009021A1 /* ViewModels */,
 				F4933FCF22CF1C1C009021A1 /* Controllers */,
@@ -154,6 +163,7 @@
 		F4933FCF22CF1C1C009021A1 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				F4933FAC22CF1BDC009021A1 /* ViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -161,6 +171,7 @@
 		F4933FD022CF1C22009021A1 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				F4FF6F0222D28BC000D8DB7F /* PhotoExploreViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -170,6 +181,23 @@
 			children = (
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		F4FF6F0422D290E000D8DB7F /* Operations */ = {
+			isa = PBXGroup;
+			children = (
+				F4FF6F0522D290FC00D8DB7F /* FetchPhotosFromFlickrOperation.swift */,
+				F4FF6F0722D2923500D8DB7F /* BaseOperation.swift */,
+				F4FF6F0922D29CE300D8DB7F /* FetchPhotosFromUnsplashOperation.swift */,
+			);
+			path = Operations;
+			sourceTree = "<group>";
+		};
+		F4FF6F0B22D2A09900D8DB7F /* Persistance */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Persistance;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,8 +303,12 @@
 			files = (
 				F4933FD922CF22BA009021A1 /* Photo.swift in Sources */,
 				F4933FAD22CF1BDC009021A1 /* ViewController.swift in Sources */,
+				F4FF6F0822D2923500D8DB7F /* BaseOperation.swift in Sources */,
 				F4933FAB22CF1BDC009021A1 /* AppDelegate.swift in Sources */,
+				F4FF6F0322D28BC000D8DB7F /* PhotoExploreViewModel.swift in Sources */,
+				F4FF6F0A22D29CE300D8DB7F /* FetchPhotosFromUnsplashOperation.swift in Sources */,
 				F4933FD322CF1C41009021A1 /* FlickrService.swift in Sources */,
+				F4FF6F0622D290FC00D8DB7F /* FetchPhotosFromFlickrOperation.swift in Sources */,
 				F4933FD522CF1E94009021A1 /* UnsplashService.swift in Sources */,
 				F4933FD722CF1FA5009021A1 /* API.swift in Sources */,
 			);

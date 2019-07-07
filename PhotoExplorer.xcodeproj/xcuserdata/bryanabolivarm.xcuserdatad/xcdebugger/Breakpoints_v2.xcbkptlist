@@ -6,49 +6,161 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PhotoExplorer/App/Features/PhotoExplore/Operations/MainOperation.swift"
+            timestampString = "584227500.765033"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "_isExecuting"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PhotoExplorer/App/Networking/API.swift"
-            timestampString = "584003249.8183"
+            timestampString = "584228824.963073"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "86"
-            endingLineNumber = "86"
-            landmarkName = "fetchRecentPhotosFromUnsplash(completion:)"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "fetchRecentPhotosFromFlickr(completion:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "PhotoExplorer.API.fetchRecentPhotosFromUnsplash(completion: (Swift.Array&lt;PhotoExplorer.Photo&gt;) -&gt; ()) -&gt; ()"
+                  symbolName = "PhotoExplorer.API.fetchRecentPhotosFromFlickr(completion: (Swift.Array&lt;PhotoExplorer.Photo&gt;) -&gt; ()) -&gt; ()"
                   moduleName = "PhotoExplorer"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/bryanabolivarm/personalProjects/PhotoExplorer/PhotoExplorer/App/Networking/API.swift"
-                  timestampString = "584003249.928538"
+                  urlString = "file:///Users/bryanabolivarm/.Trash/PhotoExplorer/PhotoExplorer/App/Networking/API.swift"
+                  timestampString = "584228478.157799"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "86"
-                  endingLineNumber = "86"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
                   offsetFromSymbolStart = "518">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in PhotoExplorer.API.fetchRecentPhotosFromUnsplash(completion: (Swift.Array&lt;PhotoExplorer.Photo&gt;) -&gt; ()) -&gt; ()"
+                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in PhotoExplorer.API.fetchRecentPhotosFromFlickr(completion: (Swift.Array&lt;PhotoExplorer.Photo&gt;) -&gt; ()) -&gt; ()"
                   moduleName = "PhotoExplorer"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/bryanabolivarm/personalProjects/PhotoExplorer/PhotoExplorer/App/Networking/API.swift"
-                  timestampString = "584003249.931313"
+                  urlString = "file:///Users/bryanabolivarm/.Trash/PhotoExplorer/PhotoExplorer/App/Networking/API.swift"
+                  timestampString = "584228478.160157"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "87"
-                  endingLineNumber = "87"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
                   offsetFromSymbolStart = "250">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PhotoExplorer/App/Networking/API.swift"
+            timestampString = "584228824.9632"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "fetchRecentPhotosFromFlickr(completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PhotoExplorer/App/Networking/API.swift"
+            timestampString = "584228824.9632781"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "fetchRecentPhotosFromFlickr(completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in PhotoExplorer.API.fetchRecentPhotosFromFlickr(completion: (Swift.Array&lt;PhotoExplorer.Photo&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "PhotoExplorer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bryanabolivarm/.Trash/PhotoExplorer/PhotoExplorer/App/Networking/API.swift"
+                  timestampString = "584228478.171863"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "757">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (PhotoExplorer.FlickrPhoto) -&gt; PhotoExplorer.Photo in closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in PhotoExplorer.API.fetchRecentPhotosFromFlickr(completion: (Swift.Array&lt;PhotoExplorer.Photo&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "PhotoExplorer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bryanabolivarm/.Trash/PhotoExplorer/PhotoExplorer/App/Networking/API.swift"
+                  timestampString = "584228478.174309"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "43">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PhotoExplorer/App/Networking/API.swift"
+            timestampString = "584228824.9633321"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "fetchRecentPhotosFromFlickr(completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PhotoExplorer/App/Networking/API.swift"
+            timestampString = "584228824.963378"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "fetchRecentPhotosFromFlickr(completion:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
