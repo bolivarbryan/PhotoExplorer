@@ -33,8 +33,13 @@
 	* PhotoDetailsViewController
 		* Details of picture screen
 		
+
+# #Known Issues
+* Use of force unwrap on cells and photoEntityManagedObject. this could be improved by adding a extra layer of error handling (guard, do-catch)
+* values search on string: this could be improved by adding a regex which extracts the value without extra filterings or splits (not friendly with performance) 
+* Since App is thread safe, it feels like adding operations is a overkill but the idea is to support multiple services so this can be scalable for a bigger challenge
 		
-# Upcoming updates
+## Upcoming updates
 * Integrate Search box in View (API Request and operation ready)
 * Adding tests for Validate stability and documentation
 * Adding animations for loading, pull to refresh 
