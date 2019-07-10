@@ -163,5 +163,69 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PhotoExplorer/DatabaseManager.swift"
+            timestampString = "584437568.301913"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "fetchAllPhotos()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PhotoExplorer/App/Features/PhotoExplore/Operations/FetchPhotosFromUnsplashOperation.swift"
+            timestampString = "584437568.302037"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "execute()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in closure #1 (Swift.Array&lt;PhotoExplorer.Photo&gt;) -&gt; () in PhotoExplorer.FetchPhotosFromUnsplashOperation.execute() -&gt; ()"
+                  moduleName = "PhotoExplorer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bryanabolivarm/Desktop/PhotoExplorer/PhotoExplorer/App/Features/PhotoExplore/Operations/FetchPhotosFromUnsplashOperation.swift"
+                  timestampString = "584436600.72833"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "28">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (PhotoExplorer.Photo) -&gt; () in closure #1 () -&gt; () in closure #1 (Swift.Array&lt;PhotoExplorer.Photo&gt;) -&gt; () in PhotoExplorer.FetchPhotosFromUnsplashOperation.execute() -&gt; ()"
+                  moduleName = "PhotoExplorer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bryanabolivarm/Desktop/PhotoExplorer/PhotoExplorer/App/Features/PhotoExplore/Operations/FetchPhotosFromUnsplashOperation.swift"
+                  timestampString = "584436600.73101"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "26">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

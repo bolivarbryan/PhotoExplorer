@@ -10,24 +10,12 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    let operationQueue = OperationQueue()
-
+    let viewModel = PhotoExploreViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let flickrOperation = FetchPhotosFromFlickrOperation()
-        let unsplashOperation = FetchPhotosFromUnsplashOperation()
-        
-        unsplashOperation.completionBlock = {
-            print(unsplashOperation.photos)
-        }
-
-        unsplashOperation.addDependency(flickrOperation)
-
-        operationQueue.isSuspended = true
-        operationQueue.addOperation(flickrOperation)
-        operationQueue.addOperation(unsplashOperation)
-        operationQueue.isSuspended = false
+        viewModel.fetchPhotos()
     }
 }
 

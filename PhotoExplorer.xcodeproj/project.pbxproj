@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F473258A22D5B9490029C441 /* PhotoExplorer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F473258822D5B9490029C441 /* PhotoExplorer.xcdatamodeld */; };
+		F473258C22D5B99D0029C441 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F473258B22D5B99D0029C441 /* DatabaseManager.swift */; };
 		F4933FAB22CF1BDC009021A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4933FAA22CF1BDC009021A1 /* AppDelegate.swift */; };
 		F4933FAD22CF1BDC009021A1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4933FAC22CF1BDC009021A1 /* ViewController.swift */; };
 		F4933FB022CF1BDC009021A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4933FAE22CF1BDC009021A1 /* Main.storyboard */; };
@@ -34,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F473258922D5B9490029C441 /* PhotoExplorer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PhotoExplorer.xcdatamodel; sourceTree = "<group>"; };
+		F473258B22D5B99D0029C441 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DatabaseManager.swift; path = PhotoExplorer/DatabaseManager.swift; sourceTree = SOURCE_ROOT; };
 		F4933FA722CF1BDC009021A1 /* PhotoExplorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoExplorer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4933FAA22CF1BDC009021A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4933FAC22CF1BDC009021A1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +103,7 @@
 				F4933FB122CF1BDE009021A1 /* Assets.xcassets */,
 				F4933FB322CF1BDE009021A1 /* LaunchScreen.storyboard */,
 				F4933FB622CF1BDE009021A1 /* Info.plist */,
+				F473258822D5B9490029C441 /* PhotoExplorer.xcdatamodeld */,
 			);
 			path = PhotoExplorer;
 			sourceTree = "<group>";
@@ -186,8 +191,8 @@
 		F4FF6F0422D290E000D8DB7F /* Operations */ = {
 			isa = PBXGroup;
 			children = (
-				F4FF6F0522D290FC00D8DB7F /* FetchPhotosFromFlickrOperation.swift */,
 				F4FF6F0722D2923500D8DB7F /* BaseOperation.swift */,
+				F4FF6F0522D290FC00D8DB7F /* FetchPhotosFromFlickrOperation.swift */,
 				F4FF6F0922D29CE300D8DB7F /* FetchPhotosFromUnsplashOperation.swift */,
 			);
 			path = Operations;
@@ -196,6 +201,7 @@
 		F4FF6F0B22D2A09900D8DB7F /* Persistance */ = {
 			isa = PBXGroup;
 			children = (
+				F473258B22D5B99D0029C441 /* DatabaseManager.swift */,
 			);
 			path = Persistance;
 			sourceTree = "<group>";
@@ -303,11 +309,13 @@
 			files = (
 				F4933FD922CF22BA009021A1 /* Photo.swift in Sources */,
 				F4933FAD22CF1BDC009021A1 /* ViewController.swift in Sources */,
+				F473258A22D5B9490029C441 /* PhotoExplorer.xcdatamodeld in Sources */,
 				F4FF6F0822D2923500D8DB7F /* BaseOperation.swift in Sources */,
 				F4933FAB22CF1BDC009021A1 /* AppDelegate.swift in Sources */,
 				F4FF6F0322D28BC000D8DB7F /* PhotoExploreViewModel.swift in Sources */,
 				F4FF6F0A22D29CE300D8DB7F /* FetchPhotosFromUnsplashOperation.swift in Sources */,
 				F4933FD322CF1C41009021A1 /* FlickrService.swift in Sources */,
+				F473258C22D5B99D0029C441 /* DatabaseManager.swift in Sources */,
 				F4FF6F0622D290FC00D8DB7F /* FetchPhotosFromFlickrOperation.swift in Sources */,
 				F4933FD522CF1E94009021A1 /* UnsplashService.swift in Sources */,
 				F4933FD722CF1FA5009021A1 /* API.swift in Sources */,
@@ -573,6 +581,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F473258822D5B9490029C441 /* PhotoExplorer.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F473258922D5B9490029C441 /* PhotoExplorer.xcdatamodel */,
+			);
+			currentVersion = F473258922D5B9490029C441 /* PhotoExplorer.xcdatamodel */;
+			path = PhotoExplorer.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = F4933F9F22CF1BDC009021A1 /* Project object */;
 }

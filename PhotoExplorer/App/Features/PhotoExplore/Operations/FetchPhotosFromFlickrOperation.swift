@@ -9,14 +9,14 @@
 import Foundation
 
 class FetchPhotosFromFlickrOperation: BaseOperation {
-    var photos: [Photo] = []
-
     override init() {}
 
     override func execute() {
         API.flickr(endpoint: .fetchRecents).request { photos in
             DispatchQueue.main.async {
-                self.photos = photos
+                photos.forEach({ (photo) in
+                    DatabaseManager.shared.save(photo: photo)
+                })
             }
             self.finish()
         }
