@@ -4,6 +4,9 @@
 * The project was focused on easy integration of extra services.
 
 
+![](record.gif)
+
+
 ## Dependencies used
 
 * Kingfisher: Used for fetching and caching images locally in a easy way
