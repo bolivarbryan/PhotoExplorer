@@ -40,13 +40,13 @@ extension UnsplashService {
             let URLParams = [
                 "page": "1",
                 "client_id": UnsplashService.client_id,
-                "per_page": "20"
+                "per_page": "50"
             ]
             return URLParams
         case let .search(query: query):
             let URLParams = [
                 "page": "1",
-                "per_page": "20",
+                "per_page": "50",
                 "client_id": UnsplashService.client_id,
                 "query": query
             ]

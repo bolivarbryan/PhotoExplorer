@@ -8,9 +8,25 @@
 
 import Foundation
 
+protocol  PhotoExploreViewModelDelegate {
+    func didFinishFetchingPhotos()
+}
+
 class PhotoExploreViewModel {
     var photos: [Photo] = []
+
+    var photosByService: [[Photo]] {
+        // Dev Notes: The way I'm filtering should be improved by using the enum property instead of hardcoding the source value. reason: potential typo error could return 0 results
+
+        let flickrPhotos = photos.filter { $0.source == "Flickr" }
+        let unsplashPhotos = photos.filter { $0.source == "Unsplash" }
+
+        return [flickrPhotos, unsplashPhotos]
+    }
+
     let operationQueue = OperationQueue()
+
+    var delegate: PhotoExploreViewModelDelegate?
     
     func fetchPhotos() {
         let flickrOperation = FetchPhotosFromFlickrOperation()
@@ -19,7 +35,7 @@ class PhotoExploreViewModel {
         unsplashOperation.completionBlock = {
             DispatchQueue.main.async {
                 self.photos = DatabaseManager.shared.fetchAllPhotos()
-                print(self.photos)
+                self.delegate?.didFinishFetchingPhotos()
             }
         }
 

@@ -28,14 +28,14 @@ extension FlickrService {
         switch self {
         case .fetchRecents:
             let minuteInSeconds = 60.0
-            let date = Date().timeIntervalSince1970 - (minuteInSeconds * 5)
+            let date = Date().timeIntervalSince1970 - (minuteInSeconds * 10)
             let URLParams = [
                 "method": "flickr.photos.search",
                 "api_key": FlickrService.apiKey,
                 "format": "json",
                 "min_upload_date": "\(date)",
                 "nojsoncallback": "1",
-                "per_page": "20",
+                "per_page": "50",
             ]
             return URLParams
         case let .search(query: query):
@@ -46,7 +46,7 @@ extension FlickrService {
                 "format": "json",
                 "text": query,
                 "nojsoncallback": "1",
-                "per_page": "20"
+                "per_page": "50"
             ]
             return URLParams
         }

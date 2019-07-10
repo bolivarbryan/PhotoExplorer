@@ -9,6 +9,7 @@
 import Foundation
 
 enum Photo {
+
     case flickr(farmID: String, serverID: String, id: String, secret: String, title: String)
     case unsplash(description: String, url: String)
 
@@ -69,5 +70,10 @@ enum Photo {
         }
         
         return nil
+    }
+
+    static func ==(lhs: Photo, rhs: Photo) -> Bool {
+        return lhs.source == rhs.source &&
+        lhs.pictureURL == rhs.pictureURL
     }
 }

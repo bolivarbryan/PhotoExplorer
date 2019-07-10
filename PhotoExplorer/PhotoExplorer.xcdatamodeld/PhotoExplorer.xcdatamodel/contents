@@ -8,6 +8,12 @@
             <uniquenessConstraint>
                 <constraint value="pictureURL"/>
             </uniquenessConstraint>
+            <uniquenessConstraint>
+                <constraint value="caption"/>
+            </uniquenessConstraint>
+            <uniquenessConstraint>
+                <constraint value="source"/>
+            </uniquenessConstraint>
         </uniquenessConstraints>
     </entity>
     <elements>
