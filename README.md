@@ -1,4 +1,4 @@
-## PhotoExplorer
+# 📷 PhotoExplorer
 
 * This example app lets users fetch pictures from different sources and list them on their devices
 * The project was focused on easy integration of extra services.
