@@ -11,6 +11,7 @@ import Foundation
 enum API {
     case flickr(endpoint: FlickrService)
     case unsplash(endpoint: UnsplashService)
+    case pexel(endpoint: PexelService)
 }
 
 extension API {
@@ -24,7 +25,35 @@ extension API {
             fetchRecentPhotosFromUnsplash(completion: completion)
         case let .unsplash(endpoint: .search(query: query)):
             searchPhotosFromUnsplash(query: query, completion: completion)
+        case let .pexel(endpoint: .fetchRecents):
+            fetchRecentPhotosFromPexel(completion: completion)
+        case let .pexel(endpoint: .search(query: query)):
+            // -TODO: Integrate search for pexel
+            print("Searching in pexel, in progress.")
         }
+    }
+
+    func fetchRecentPhotosFromPexel(completion: @escaping (_ response: [Photo]) -> Void) {
+        print("fetching recents from Pexel")
+        let sessionConfig = URLSessionConfiguration.default
+        let session = URLSession(configuration: sessionConfig, delegate: nil, delegateQueue: nil)
+        let task = session.dataTask(with: PexelService.fetchRecents.request, completionHandler: { (data: Data?, response: URLResponse?, error: Error?) -> Void in
+            if (error == nil) {
+                do {
+                    let jsonResponse = try JSONDecoder().decode(PexelDecoder.self, from: data!)
+
+                    let photos = jsonResponse.photos.map { Photo.pexel(description: $0.photographer, url: $0.src.medium) }
+                    completion(photos)
+
+                } catch {
+                    print("parsing error", error.localizedDescription)
+                }
+            }else {
+                print("URL Session Task Failed: %@", error!.localizedDescription);
+            }
+        })
+        task.resume()
+        session.finishTasksAndInvalidate()
     }
 
     func fetchRecentPhotosFromFlickr(completion: @escaping (_ response: [Photo]) -> Void) {

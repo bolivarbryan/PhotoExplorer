@@ -12,12 +12,15 @@ enum Photo {
 
     case flickr(farmID: String, serverID: String, id: String, secret: String, title: String)
     case unsplash(description: String, url: String)
+    case pexel(description: String, url: String)
 
     var pictureURL: String {
         switch self {
         case  let .flickr(farmID: farmID, serverID: serverID, id: id, secret: secret, title: _):
             return "https://farm\(farmID).staticflickr.com/\(serverID)/\(id)_\(secret).jpg"
         case let .unsplash(description: _, url: url):
+            return url
+        case let .pexel(description: _, url: url):
             return url
         }
     }
@@ -28,6 +31,8 @@ enum Photo {
             return title
         case let .unsplash(description: description, url: _):
             return description
+        case let .pexel(description: description, url: _):
+            return description
         }
     }
 
@@ -37,6 +42,8 @@ enum Photo {
             return "Flickr"
         case .unsplash(description: _, url: _):
             return "Unsplash"
+        case .pexel(description: _, url: _):
+            return "Pexel"
         }
     }
 
@@ -66,6 +73,9 @@ enum Photo {
 
         } else if photo.source == "Unsplash" {
             return Photo.unsplash(description: photo.caption!,
+                                  url: photo.pictureURL!)
+        } else if photo.source == "Pexel" {
+            return Photo.pexel(description: photo.caption!,
                                   url: photo.pictureURL!)
         }
         
