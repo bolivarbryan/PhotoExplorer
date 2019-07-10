@@ -13,6 +13,7 @@ enum Photo {
     case flickr(farmID: String, serverID: String, id: String, secret: String, title: String)
     case unsplash(description: String, url: String)
     case pexel(description: String, url: String)
+    case pixabay(tags: String, url: String)
 
     var pictureURL: String {
         switch self {
@@ -21,6 +22,8 @@ enum Photo {
         case let .unsplash(description: _, url: url):
             return url
         case let .pexel(description: _, url: url):
+            return url
+        case let .pixabay(tags: _, url: url):
             return url
         }
     }
@@ -33,6 +36,8 @@ enum Photo {
             return description
         case let .pexel(description: description, url: _):
             return description
+        case let .pixabay(tags: tags, url: _):
+            return tags
         }
     }
 
@@ -44,6 +49,8 @@ enum Photo {
             return "Unsplash"
         case .pexel(description: _, url: _):
             return "Pexel"
+        case .pixabay(tags: _, url: _):
+            return "Pixabay"
         }
     }
 
@@ -77,6 +84,8 @@ enum Photo {
         } else if photo.source == "Pexel" {
             return Photo.pexel(description: photo.caption!,
                                   url: photo.pictureURL!)
+        } else if photo.source == "Pixabay" {
+            return Photo.pixabay(tags: photo.caption!, url: photo.pictureURL!)
         }
         
         return nil

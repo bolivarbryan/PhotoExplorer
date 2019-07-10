@@ -21,8 +21,9 @@ class PhotoExploreViewModel {
         let flickrPhotos = photos.filter { $0.source == "Flickr" }
         let unsplashPhotos = photos.filter { $0.source == "Unsplash" }
         let pexelPhotos = photos.filter { $0.source == "Pexel" }
+        let pixabayPhotos = photos.filter { $0.source == "Pixabay" }
 
-        return [flickrPhotos, unsplashPhotos, pexelPhotos]
+        return [flickrPhotos, unsplashPhotos, pexelPhotos, pixabayPhotos]
     }
 
     let operationQueue = OperationQueue()
@@ -33,6 +34,7 @@ class PhotoExploreViewModel {
         let flickrOperation = FetchPhotosFromFlickrOperation()
         let unsplashOperation = FetchPhotosFromUnsplashOperation()
         let pexelOperation = FetchPhotosFromPexelOperation()
+        let pixabayOperation = FetchPhotosFromPixabayOperation()
 
         pexelOperation.completionBlock = {
             DispatchQueue.main.async {
@@ -55,10 +57,18 @@ class PhotoExploreViewModel {
             }
         }
 
+        pixabayOperation.completionBlock = {
+            DispatchQueue.main.async {
+                self.photos = DatabaseManager.shared.fetchAllPhotos()
+                self.delegate?.didFinishFetchingPhotos()
+            }
+        }
+
         operationQueue.isSuspended = true
         operationQueue.addOperation(flickrOperation)
         operationQueue.addOperation(unsplashOperation)
         operationQueue.addOperation(pexelOperation)
+        operationQueue.addOperation(pixabayOperation)
         operationQueue.isSuspended = false
     }
 }
