@@ -46,3 +46,11 @@
 * Integrate Search box in View (API Request and operation ready)
 * Adding tests for Validate stability and documentation
 * Adding animations for loading, pull to refresh 
+
+
+## Please take a look at
+* https://github.com/bolivarbryan/GameCatalog
+* https://github.com/bolivarbryan/PostsViewer
+* https://github.com/bolivarbryan/GIPHYClient
+* https://github.com/bolivarbryan/PostsFeed-ObjC
+* https://github.com/bolivarbryan/DrinksROnMe
