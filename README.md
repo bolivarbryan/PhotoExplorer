@@ -17,13 +17,13 @@
 * Models
 	*  Photo 
 		*  	Enum instead of a class for a clear understanding of what services we are using. 
-		*   Using Unsplash and Flickr web services for treating them as the same thing independent of their original structure. check Services in Network section
+		*   Using Unsplash, Pexel and Flickr web services for treating them as the same thing independent of their original structure. check Services in Network section
 * ViewModels
 	* PhotoExploreViewModel
 		* Is in Charge of communicating with network operations and database for passing data to PhotoExploreViewController
 * Networking
 	* API
-		* Base Enum for listing the different services used in app (Unsplash and Flickr)
+		* Base Enum for listing the different services used in app (Unsplash, Pexel and Flickr)
 		* Easy integration of extra services
 * Operations
 	* Used for handling a async task for fetching and storing data without data-loss risk. 
