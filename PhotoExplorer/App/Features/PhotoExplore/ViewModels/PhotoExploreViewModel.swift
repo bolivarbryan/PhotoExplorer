@@ -41,8 +41,19 @@ class PhotoExploreViewModel {
             }
         }
 
-        unsplashOperation.addDependency(flickrOperation)
-        pexelOperation.addDependency(unsplashOperation)
+        unsplashOperation.completionBlock = {
+            DispatchQueue.main.async {
+                self.photos = DatabaseManager.shared.fetchAllPhotos()
+                self.delegate?.didFinishFetchingPhotos()
+            }
+        }
+
+        pexelOperation.completionBlock = {
+            DispatchQueue.main.async {
+                self.photos = DatabaseManager.shared.fetchAllPhotos()
+                self.delegate?.didFinishFetchingPhotos()
+            }
+        }
 
         operationQueue.isSuspended = true
         operationQueue.addOperation(flickrOperation)

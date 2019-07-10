@@ -12,6 +12,8 @@ class PhotoExploreViewController: UIViewController {
 
     let viewModel = PhotoExploreViewModel()
     var selectedPhoto: Photo?
+    let itemsPerRow: CGFloat = 7
+    let sectionInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
 
     @IBOutlet weak var collectionView: UICollectionView!
 
@@ -77,6 +79,19 @@ extension PhotoExploreViewController: UICollectionViewDataSource, UICollectionVi
         if let vc = segue.destination as? PhotoDetailsViewController {
             vc.photo = selectedPhoto
         }
+    }
+}
+
+extension PhotoExploreViewController: UICollectionViewDelegateFlowLayout {
+
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let paddingSpace = sectionInsets.left * (itemsPerRow + 1)
+        let availableWidth = view.frame.width - paddingSpace
+        let widthPerItem = availableWidth / itemsPerRow
+
+        return CGSize(width: widthPerItem, height: widthPerItem)
     }
 }
 

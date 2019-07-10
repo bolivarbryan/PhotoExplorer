@@ -35,9 +35,7 @@ class DatabaseManager {
 
         do {
             try managedContext.save()
-        } catch let error as NSError {
-            print("Could not save. \(error), \(error.userInfo)")
-        }
+        } catch { }
     }
 
     func fetchAllPhotos() -> [Photo] {
