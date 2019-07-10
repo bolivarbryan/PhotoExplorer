@@ -1,0 +1,40 @@
+## PhotoExplorer
+
+* This example app lets users fetch pictures from different sources and list them on their devices
+* The project was focused on easy integration of extra services.
+
+
+## Dependencies used
+
+* Kingfisher: Used for fetching and caching images locally in a easy way
+ 
+
+## Architecture
+
+* Models
+	*  Photo 
+		*  	Enum instead of a class for a clear understanding of what services we are using. 
+		*   Using Unsplash and Flickr web services for treating them as the same thing independent of their original structure. check Services in Network section
+* ViewModels
+	* PhotoExploreViewModel
+		* Is in Charge of communicating with network operations and database for passing data to PhotoExploreViewController
+* Networking
+	* API
+		* Base Enum for listing the different services used in app (Unsplash and Flickr)
+		* Easy integration of extra services
+* Operations
+	* Used for handling a async task for fetching and storing data without data-loss risk. 
+* Persistance
+	* DatabaseManager
+		* Singleton used for hadling data storage for photos and also in charge of returning photos in a common class.
+* Controllers
+	* PhotoExploreViewController
+		* Main Class which loads pictures 
+	* PhotoDetailsViewController
+		* Details of picture screen
+		
+		
+# Upcoming updates
+* Integrate Search box in View (API Request and operation ready)
+* Adding tests for Validate stability and documentation
+* Adding animations for loading, pull to refresh 
