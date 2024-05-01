@@ -6,6 +6,8 @@
 
 ![](record.gif)
 
+### Coverage (70.5%)
+![](coverage_report.png)
 
 ## 🔌 Dependencies used 
 
