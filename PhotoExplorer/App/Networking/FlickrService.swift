@@ -28,7 +28,7 @@ extension FlickrService {
         switch self {
         case .fetchRecents:
             let minuteInSeconds = 60.0
-            let date = Date().timeIntervalSince1970 - (minuteInSeconds * 10)
+            let date = Int(Date().timeIntervalSince1970 - (minuteInSeconds * 10))
             let URLParams = [
                 "method": "flickr.photos.search",
                 "api_key": FlickrService.apiKey,

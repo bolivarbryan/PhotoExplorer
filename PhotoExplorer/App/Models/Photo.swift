@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum Photo {
+enum Photo: Equatable {
 
     case flickr(farmID: String, serverID: String, id: String, secret: String, title: String)
     case unsplash(description: String, url: String)
@@ -63,7 +63,7 @@ enum Photo {
 
             var splittedURL = url.dropFirst(12)
             splittedURL = splittedURL.dropLast(4)
-            var subgroup = splittedURL.split(separator: "/")
+            let subgroup = splittedURL.split(separator: "/")
 
             guard
                 let farmID = subgroup.first?.split(separator: ".").first,

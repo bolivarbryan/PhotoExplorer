@@ -26,14 +26,14 @@ extension API {
             fetchRecentPhotosFromUnsplash(completion: completion)
         case let .unsplash(endpoint: .search(query: query)):
             searchPhotosFromUnsplash(query: query, completion: completion)
-        case let .pexel(endpoint: .fetchRecents):
+        case .pexel(endpoint: .fetchRecents):
             fetchRecentPhotosFromPexel(completion: completion)
-        case let .pexel(endpoint: .search(query: query)):
+        case .pexel(endpoint: .search):
             // -TODO: Integrate search for pexel
             print("Searching in pexel, in progress.")
-        case let .pixabay(endpoint: .fetchRecents):
+        case .pixabay(endpoint: .fetchRecents):
             fetchRecentPhotosFromPixabay(completion: completion)
-        case let .pixabay(endpoint: .search(query: query)):
+        case .pixabay(endpoint: .search(query: _)):
             // -TODO: Integrate search for pexel
             print("Searching in pixabay, in progress.")
         }
